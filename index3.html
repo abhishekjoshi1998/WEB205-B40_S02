@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>feedback form</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, red, purple);
+        }
+        .form-container{
+            text-align: center;
+            padding: 20px;
+            width: 320px;
+            box-sizing: border-box;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+         .form-container select,
+        .form-container textarea,
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container input[type="url"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .form-container .rating {
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .form-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-container input[type = "submit"]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            width: 100%;
+        }
+        .form-container input[type="submit"]:hover{
+            background-color: #72aa75;
+        }
+        .form-container label .required {
+            color: red;
+        }
+         
+
+    </style>
+</head>
+<body>
+ <div class="form-container" ><h2>Feedback Form</h2>
+    <form>
+        <label for="feedback-type">Feedback Tpye</label>
+        <select name="feedback-type" id="feedback-type">
+            <option value="complaint">complaint</option>
+            <option value="suggations">suggations</option>
+            <option value="Appriciation">Appriciation</option>
+        </select>
+        <label for="message">Message:</label>
+        <textarea name="Message" id="Message" placeholder="Enter Your Message" rows="5"></textarea>
+       <div class="rating">
+        <label>Website Rating:</label><br>
+        <label ><input type="radio" name="rating" value="Excellent">Excellent</label>
+        <label for=""><input type="radio" name="rating" value="Good">Good</label>
+        <label for=""><input type="radio" name="rating" value="Average">Average</label>
+        <label for=""><input type="radio" name="rating" value="Poor">Poor</label>
+     </div>
+    <label for="age">Age(10-100)</label>
+    <input type="text" name="Age" placeholder="Enter Age" id="age">
+
+    <label for="email">Email <span class="required">*</label>
+    <input type="email" name="email" placeholder="Enter Email">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Enter Password ">
+    
+    <label for="website">Website URL</label>
+    <input type="url" placeholder="Enter URL" id="url">
+    <label for=""><input type="checkbox" required> I agree to the terms condition</label>
+    <input type="submit" value="submit">
+    </form>
+ </div>
+   
+</body>
+</html>
